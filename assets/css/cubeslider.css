@@ -1,0 +1,206 @@
+/* Style for Cube Slider
+-------------------------------------------------------------------*/
+
+.cubeSlider {
+    display: none;
+}
+
+.cubeSlider-wrapper {
+    -webkit-perspective: 200vh;
+    perspective: 200vh;
+    background-color: #474747;
+}
+
+.cubeSlider-wrapper .cubeSlider {
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ( -50vh) rotateX(0deg);
+    transform: translateZ( -50vh) rotateX(0deg);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s;
+}
+
+.cubeSlider-wrapper .cubeSlider > div {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotateX( 180deg) translateZ( 50vh);
+    transform: rotateX( 180deg) translateZ( 50vh);
+    color: #fff;
+    background-position: center !important;
+    background-color: #000 !important
+}
+
+.cubeSlider-wrapper .control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 220px;
+    margin: auto;
+    pointer-events: none;
+}
+
+.cubeSlider-wrapper .control a {
+    color: #fff;
+    font-size: 10px;
+    line-height: 1em;
+    margin: 50px 70px;
+    pointer-events: visible;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.cubeSlider-wrapper .control .next {
+    float: right;
+    clear: right;
+}
+
+.cubeSlider-wrapper .control .prev {
+    float: right;
+}
+
+.cubeSlider-wrapper .cubeSlider > div.before {
+    -webkit-transform: rotateX( 90deg) translateZ( 50vh);
+    transform: rotateX( 90deg) translateZ( 50vh);
+}
+
+.cubeSlider-wrapper .cubeSlider > div.active {
+    -webkit-transform: rotateX( 0deg) translateZ( 50vh);
+    transform: rotateX( 0deg) translateZ( 50vh);
+}
+
+.cubeSlider-wrapper .cubeSlider > div.after {
+    -webkit-transform: rotateX( 270deg) translateZ( 50vh);
+    transform: rotateX( 270deg) translateZ( 50vh)
+}
+
+.cubeSlider h2 {
+    font-size: 60px;
+    line-height: 1em;
+}
+
+.cubeSlider p {
+    font-size: 18px;
+}
+
+.cubeSlider a {
+    line-height: 2.3em;
+    display: inline-block;
+    -webkit-transition: 250ms;
+    transition: 250ms;
+}
+
+.cubeSlider .cl-effect-3d a span {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 0px 30px;
+}
+
+.cubeSlider .cl-effect-3d a:hover span::before,
+.cubeSlider .cl-effect-3d a:focus span::before {
+    background: #ffffff !important;
+    left: -2px;
+    width: 102%;
+    color: #424242;
+}
+
+.cubeSlider .cl-effect-3d a span::before {
+    background: #E0E0E0 !important;
+}
+
+.cubeSlider .cube-exit {
+    background-image: url(assets/img/arrow.png);
+    width: 116px;
+    height: 72px;
+    border: 0;
+    line-height: 46px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8em;
+    margin: auto;
+}
+
+.cubeSlider .cube-exit:hover {
+    background-color: transparent;
+    background-image: url(assets/img/arrow.png);
+    color: #fff;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+}
+
+.cubeSlider .cube-exit i.fa.fa-chevron-down {
+    margin-right: 3px;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 250ms;
+    transition: 250ms;
+}
+
+.cubeSlider .cube-exit:hover i.fa.fa-chevron-down {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.cubeSlider .captions > div {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 30px 0;
+    width: 10em;
+    line-height: 1em;
+    height: calc(1em + 60px);
+    color: rgb(255, 255, 255);
+    background-color: rgb(206, 60, 50);
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+    right: 0;
+}
+
+.cubeSlider .captions > div:nth-child(1) {
+    background-color: #3da7c4;
+}
+
+.cubeSlider .captions > div:nth-child(2) {
+    background-color: #ea6f2b;
+}
+
+.cubeSlider .captions > div:nth-child(3) {
+    background-color: #ce3c32;
+}
+
+.cubeSlider .captions > div:nth-child(4) {
+    background-color: #a8bc39;
+}
+
+.cubeSlider .captions .active {
+    z-index: 999;
+    visibility: visible;
+}
+
+.mobile .cubeSlider h2 {
+    font-size: 10vw;
+}
+
+.mobile .cubeSlider-wrapper .control {
+    display: none;
+}
+
+.mobile .cubeSlider-wrapper .cubeSlider > div {
+    padding: 1em !important
+}
